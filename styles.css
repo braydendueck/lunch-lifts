@@ -1,5 +1,9 @@
 :root{--bg:#111418;--card:#1b2027;--card2:#232a33;--line:#2e3742;--txt:#eef2f6;--mut:#9aa7b4;--acc:#4fc3f7;--ok:#4caf50;--okbg:#17321b;--warn:#ffb74d;--bad:#ef5350;color-scheme:dark}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+/* iOS standalone + black-translucent status bar: when the page is shorter than the screen, WebKit sizes the layout viewport
+   to screen minus the status bar, so position:fixed;bottom:0 floats ~status-bar-height above the real bottom.
+   Making the document at least that much taller pins fixed bars to the physical bottom. */
+html{min-height:calc(100% + env(safe-area-inset-top))}
 html,body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
 body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
 button{font:inherit;color:inherit;cursor:pointer}
