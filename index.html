@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111418">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lunch Lifts">
+<title>Lunch Lifts</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">Lunch Lifts</div>
+  <nav class="tabs" role="tablist">
+    <button data-view="log" class="tab active">Log</button>
+    <button data-view="history" class="tab">History</button>
+    <button data-view="settings" class="tab">Backup</button>
+  </nav>
+</header>
+<main id="main"></main>
+<div id="restbar" class="restbar">
+  <button id="rest60" class="restbtn">Rest 60s</button>
+  <div id="restclock" class="restclock">--</div>
+  <button id="rest90" class="restbtn">Rest 90s</button>
+</div>
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
